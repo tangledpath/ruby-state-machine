@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage          = "http://github.com/tangledpath/ruby-state-machine"
   gem.rubyforge_project = 'ruby-state-machine'
   gem.has_rdoc          = true
-  gem.extra_rdoc_files  = ['README.rdoc']
+  gem.extra_rdoc_files  = ['README.md']
   gem.files             =  Dir.glob('lib/**/*.rb') 
   gem.executables       = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files        = gem.files.grep(%r{^(test|spec|features)/})

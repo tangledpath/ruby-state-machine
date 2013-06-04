@@ -1,9 +1,11 @@
 GEM
   specs:
+    redcarpet (2.2.2)
     yard (0.8.6.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  redcarpet
   yard

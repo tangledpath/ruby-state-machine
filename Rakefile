@@ -30,7 +30,7 @@ task :default => :test
 # end
 
 YARD::Rake::YardocTask.new do |t|
-  t.files   = ['lib/**/*.rb']   
+  t.files   = ['lib/**/*.rb', 'test/*.rb']   
   t.options = ['--readme=README.md'] 
 end
 

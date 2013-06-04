@@ -1,1 +1,2 @@
+gem 'redcarpet'
 gem 'yard'

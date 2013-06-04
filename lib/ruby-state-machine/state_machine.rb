@@ -5,9 +5,12 @@ require 'ruby-state-machine/bounded_array'
 # an array of events, and one or more transition actions.  A transition can be
 # as simple as the symbol for the next state, a lambda (code) to execute.  Primitive
 # branching can also be achieved if necessary by using a "decider" instance method.
-# Please see StateMachine.state_transition for full details on the variations
-# available.  StateMachineTest also contains examples and unit tests for most (if not all)
-# of the available functionality.  See README for example.
+#
+# The {StateMachineTest} (view source) also contains examples and unit tests for most (if not all)
+# of the available functionality.  
+# Also see {http://ruby-state-mach.rubyforge.org/ README} for examples
+# @see ClassMethods#state_transition StateTransition for full details on the variations available.
+# @see StateMachineTest
 module StateMachine
   def self.included(base)
     base.extend StateMachine::ClassMethods

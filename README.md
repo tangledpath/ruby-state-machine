@@ -1,11 +1,11 @@
-## ruby-state-machine
-A full-featured state machine gem for use within ruby.  It can also be used in Rails.  This was written because we required a state machine that allowed different actions to be performed based on the previous and current events, as well as injecting logic (a "decider") to determine the next event.  
+## Ruby State Machine
+Ruby State Machine (ruby-state-machine) is a full-featured state machine gem for use within ruby.  It can also be used in Rails.  This was written because we required a state machine that allowed different actions to be performed based on the previous and current events, as well as injecting logic (a "decider") to determine the next event.  
 
 ## Installation:
 
 Add this line to your application's Gemfile:
 
-    gem 'ruby-fann'
+    gem 'ruby-state-machine'
 
 And then execute:
 
@@ -13,23 +13,27 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install ruby-fann
+    $ gem install ruby-state-machine
 
 ## Location:
 Here: http://github.com/tangledpath/ruby-state-machine
-Get docs here: http://ruby-state-mach.rubyforge.org/
+
+RDocs: http://ruby-state-mach.rubyforge.org/
 
 
 ## USAGE:
 
 ```ruby
 require 'ruby-state-machine/state_machine'
+
+# Note, a state machine is not created directly; instead, the behavior of a state
+# machine is added through a mixin, e.g.:
 class SampleMachine
   include StateMachine
   state_machine :states => [:a_state, :b_state, :c_state, :d_state], :events => [:w_event, :x_event, :y_event, :z_event]
-  state_transition :state=>:a_state, :event=>:x_event, :next=>:c_state
-  state_transition :state=>:a_state, :event=>:y_event, :next=>:a_state
-  state_transition :state=>:a_state, :event=>:z_event, :next=>:b_state
+  state_transition :state=>:a_state, :event=>:x_event, :next=>:c_state # Define next state for :a_state when :x_event is sent
+  state_transition :state=>:a_state, :event=>:y_event, :next=>:a_state # Define next state for :a_state when :y_event is sent
+  state_transition :state=>:a_state, :event=>:z_event, :next=>:b_state # ...
                                                             
   state_transition :state=>:b_state, :event=>:w_event, :next=>:b_state
   state_transition :state=>:b_state, :event=>:y_event, :next=>:c_state
@@ -43,16 +47,12 @@ sm = SampleMachine.new
 puts sm.current_state # :a_state
 sm.send_event(:x_event)
 puts sm.current_state # :c_state
-</pre>
+```
 
-For examples of other functionality, including branching, deciders, lambdas, etc, see test/test_state_machine.
+For examples of other functionality, including branching, deciders, lambdas, etc, see http://ruby-state-mach.rubyforge.org/StateMachine/ClassMethods.html#state_transition-instance_method.
 
 
-## INSTALL:
-
-* sudo gem install ruby-state-machine
-
-## Contributing
+## CONTRIBUTE
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
