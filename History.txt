@@ -1,0 +1,32 @@
+== 0.0.1 2009-08-11
+
+* 1 major enhancement:
+  * Initial release
+
+== 0.0.2 2009-08-11
+
+* 1 minor enhancement:
+  * Docs
+
+== 0.0.3 2009-08-17
+
+* 1 minor enhancement:
+  * Change ruby-state-mach -> ruby-state-machine
+
+== 0.0.4 2009-08-19
+
+* 1 minor enhancement:
+  * Add missing files
+
+== 1.0.1 2010-05-03
+
+* 1 bug fix:
+  * Fix initialize to call super when used on AR models.
+
+== 1.0.2 2010-05-18
+
+* 1 behavioral change:
+  * No longer returns to default state upon InvalidStateException.  This was making several unit tests more difficult than necessary.
+
+== 1.1.0 2013-06-04
+* Move source and home to github.

@@ -1,0 +1,1 @@
+For more information on ruby-state-machine, see http://github.com/tangledpath/ruby-state-machine
