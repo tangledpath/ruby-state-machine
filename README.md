@@ -41,7 +41,6 @@ class SampleMachine
                                                             
   state_transition :state=>:c_state, :event=>:x_event, :next=>:b_state
 end
-```
 
 sm = SampleMachine.new
 puts sm.current_state # :a_state
