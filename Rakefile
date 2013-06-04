@@ -41,7 +41,7 @@ task :upload_docs do
   host = "#{rubyforge_username}@rubyforge.org"
   remote_dir = "/var/www/gforge-projects/ruby-state-mach/"
   local_dir = 'doc'
-  #sh %{scp -r #{local_dir}/ #{host}:#{remote_dir}}
-  sh %{rsync -aCv #{local_dir} #{host}:#{remote_dir}}
+  sh %{scp -r #{local_dir}/* #{host}:#{remote_dir}}
+  #sh %{rsync -aCv #{local_dir} #{host}:#{remote_dir}}
 end
 

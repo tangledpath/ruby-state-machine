@@ -1,5 +1,5 @@
 ## ruby-state-machine
-A full-featured state machine gem for use within ruby.  It can be used in Rails, but it isn't required.  This was written because I required a state machine that allowed different actions to be performed based on the previous and current events, as well as injecting logic (a "decider") to determine the next event.  
+A full-featured state machine gem for use within ruby.  It can also be used in Rails.  This was written because we required a state machine that allowed different actions to be performed based on the previous and current events, as well as injecting logic (a "decider") to determine the next event.  
 
 ## Installation:
 
